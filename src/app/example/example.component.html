@@ -1,0 +1,8 @@
+<div style="display: flex;flex-flow: column;width: 300px;">
+    <input type="text" (input)="onChangeName($event)" #input (keydown.enter)="submit();input.value = ''">
+    <br>
+    <button (click)="submit();input.value = ''">Add</button> List Person
+    <br>
+
+    <li *ngFor="let p of state.persons">{{p?.name}}</li>
+</div>
